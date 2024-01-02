@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "TestMain"
 include ':app'
 include ':mainModlue'
-include ':test-sub:subModlue'
+include ':bussness:mylibrary'
