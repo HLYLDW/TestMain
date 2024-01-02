@@ -1,3 +1,0 @@
-[submodule "test-sub"]
-	path = test-sub
-	url = git@gitee.com:dewei121/test-sub.git
