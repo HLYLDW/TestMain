@@ -62,9 +62,6 @@ public class Test1 {
 
         List<BeanArray> zhList = readXml(path + "\\values\\arrays.xml");
 
-
-
-
         File[] files = new File(path).listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
@@ -77,13 +74,25 @@ public class Test1 {
         TreeMap<String, List<BeanArray>> map = new TreeMap<>();
         for (File file : files) {
             if (!file.isDirectory()) continue;
-            List<BeanArray> cur = readXml(file.getAbsolutePath() + "\\arrays.xml");
-            compareWithZh(zhList, cur);
-            map.put(file.getAbsolutePath(), cur);
-            createUserDotXML(file.getAbsolutePath() + "\\arrays_temp.xml", cur);
+//            String filePath = file.getAbsolutePath() + "\\arrays.xml";
+//            preWriteFile(filePath);
+            preWriteFile(file.getAbsolutePath() + "\\strings.xml");
+
+//            List<BeanArray> cur = readXml(file.getAbsolutePath() + "\\arrays.xml");
+//            compareWithZh(zhList, cur);
+//            map.put(file.getAbsolutePath(), cur);
+//            createUserDotXML(file.getAbsolutePath() + "\\arrays.xml", cur);
         }
 
+    }
 
+    private static void preWriteFile(String filePath) {
+        String content = FileUtil.readFile(filePath);
+        assert content != null;
+        FileUtil.writerFile(filePath,
+                content.replaceAll("\\[&] ", "").
+                        replaceAll("\\[&]", "").
+                        replaceAll("'", "\\\\'"));
     }
 
     private static boolean compareWithZh(List<BeanArray> zhList, List<BeanArray> cur) {
