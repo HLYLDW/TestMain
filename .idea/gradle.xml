@@ -10,9 +10,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bussness" />
+            <option value="$PROJECT_DIR$/bussness/mylibrary" />
+            <option value="$PROJECT_DIR$/lib" />
             <option value="$PROJECT_DIR$/mainModlue" />
-            <option value="$PROJECT_DIR$/test-sub" />
-            <option value="$PROJECT_DIR$/test-sub/subModlue" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
