@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="array_auto_parking">
-        <item>1</item><!-- 清除提示语句 -->
+    <array name="array_auto_parking">
+        <item></item><!-- 清除提示语句 -->
         <item>请踩住刹车，点击开始</item><!-- 显示开始泊车按钮 -->
         <item>请松开刹车，开始泊车</item>
         <item>请注意周围环境安全</item>
@@ -41,7 +41,7 @@
         <item></item>
         <item>泊车路径规划中</item>
         <item>这个车位有点难，帮帮我吧</item>
-    </string-array>
+    </array>
 
     <!-- super park -->
     <array name="array_toast_super_park">

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="array_auto_parking">Please press the brake pedal and click start.</string>
+  <string-array name="array_toast_super_park">
+    <item>Parking temporarily unavailable.</item>
+    <item>Door open.</item>
+    <item>Hood open.</item>
+    <item>Abnormal tire pressure, intelligent parking assistance unavailable.</item>
+    <item>An exception occurred, please contact customer service for assistance.</item>
+    <item>An exception occurred, please contact customer service for assistance.</item>
+    <item>An exception occurred, please contact customer service for assistance.</item>
+    <item>Please make the vehicle Ready first.</item>
+    <item>Current speed is higher than 24km/h, parking space cannot be recognized.</item>
+    <item>An exception occurred, please contact customer service for assistance.</item>
+    <item>Please fasten the seat belt first.</item>
+    <item>Please close the tailgate first.</item>
+    <item>Trailor Mode is activated, intelligent parking assistance unavailable.</item>
+    <item>Please adjust the suspension to the normal position.</item>
+    <item>Suspension is in operation, parking cannot be entered.</item>
+    <item>Suspension abnormality, please contact customer service.</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Please release the brake.</item>
+    <item>Please close the door.</item>
+    <item>Please release the accelerator pedal.</item>
+    <item>Please close the tailgate.</item>
+    <item>Please close the hood.</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Door Opened</item>
+    <item>Hood Opened</item>
+    <item>Abnormal Tire Pressure, please check it</item>
+    <item>Parking error, please contact customer service</item>
+    <item>Parking error, please contact customer service</item>
+    <item>Parking Abnormal, please contact customer service</item>
+    <item>Please make the vehicle Ready first</item>
+    <item>Unable to detect parking spaces due to higher speeds</item>
+    <item>Parking error, please contact customer service</item>
+    <item>Please fasten your seatbelt first</item>
+    <item>Trunk Opened</item>
+    <item>Trailer Mode activated, IPA is unavailable</item>
+    <item>Please adjust the suspension to normal position</item>
+    <item>Suspension in use, unable to park in</item>
+    <item>Suspension error, please contact customer service</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parking paused, the brake is not released</item>
+    <item>Parking paused, doors are opened</item>
+    <item>Parking paused, please release the accelerator pedal</item>
+    <item>Parking paused, the trunk is opened</item>
+    <item>Parking paused, the hood is opened</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string name="array_no_use_toast">Left turn ahead.</string>
+  <string name="array_no_use">Memory parking is temporarily unavailable. Please drive manually and reduce speed before trying again.</string>
+  <string-array name="array_pro_parking">
+    <item>Release the brake</item>
+    <item>[&] Left turn ahead</item>
+    <item>Right turn ahead</item>
+    <item>At the intersection ahead, please watch out for vehicles</item>
+    <item>About to enter a ramp</item>
+    <item>About to enter a ramp</item>
+    <item>About to bypass obstacles ahead</item>
+    <item>Avoiding nearby obstacles</item>
+    <item>[&] Please do not accelerate, I'm afraid</item>
+    <item>Memory parking exited</item>
+    <item>Memory parking exited</item>
+    <item>About to park in your parking space</item>
+    <item>Memory parking exited</item>
+    <item>[&]</item>
+    <item>Please pay attention to the surroundings</item>
+    <item>In narrow passage space, please be cautious</item>
+    <item>About to reach your parking space</item>
+    <item>About to drive over a speed bump, hold on tight</item>
+    <item>Bypassing pedestrians ahead</item>
+    <item>[&] Avoiding pedestrians</item>
+    <item>About to bypass the front vehicle</item>
+    <item>[&] Waiting for the front vehicle to move</item>
+    <item>Memory parking exited</item>
+    <item>About to reverse and adjust position</item>
+    <item>Pay attention to the oncoming vehicle</item>
+    <item>Failed to activate memory parking</item>
+    <item>Avoiding the vehicles behind</item>
+    <item>Watch out for pedestrians</item>
+    <item>Watch out for pedestrians</item>
+    <item>Emergency braking</item>
+    <item>Pay attention to the surroundings</item>
+    <item>[&] Rear vehicle is following for a long time, please avoid it</item>
+    <item>Searching for parking spaces along the way</item>
+    <item>Found a parking space, please click Start</item>
+    <item>Failed to find parking spaces along the way</item>
+    <item>[&]</item>
+    <item>Found a parking space, please click Start</item>
+    <item>Found a parking space, please click Start</item>
+    <item>Please pay attention to the toll gate</item>
+    <item>[&] About to drive out of the ramp, please be safe</item>
+    <item>Approaching a ramp, please take over the vehicle and help me drive through</item>
+    <item>Memory parking exited, please follow the guide line to the next level</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Release the brake and we're ready to go!</item>
+    <item>Memory parking in progress</item>
+    <item>Left turn ahead</item>
+    <item>Right turn ahead</item>
+    <item>At the intersection ahead, please watch out for vehicles</item>
+    <item>About to enter a ramp</item>
+    <item>About to enter a ramp</item>
+    <item>About to bypass obstacles ahead</item>
+    <item>Avoiding nearby obstacles</item>
+    <item>[&] Please do not accelerate</item>
+    <item>Memory parking exited</item>
+    <item>Memory parking exited</item>
+    <item>About to park in your parking space</item>
+    <item>Memory parking exited</item>
+    <item>[&]</item>
+    <item>Please pay attention to the surroundings</item>
+    <item>In narrow passage space, please be cautious</item>
+    <item>About to reach your parking space</item>
+    <item>About to drive over a speed bump, hold on tight</item>
+    <item>Bypassing pedestrians ahead</item>
+    <item>[&] Avoiding pedestrians</item>
+    <item>About to bypass the front vehicle</item>
+    <item>[&] Waiting for the front vehicle to move</item>
+    <item>Memory parking exited</item>
+    <item>About to reverse and adjust position</item>
+    <item>Pay attention to the oncoming vehicle</item>
+    <item>Failed to activate memory parking</item>
+    <item>Avoiding the vehicles behind</item>
+    <item>Watch out for pedestrians</item>
+    <item>Watch out for pedestrians</item>
+    <item>Emergency braking</item>
+    <item>Pay attention to the surroundings</item>
+    <item>[&] Rear vehicle is following for a long time, please avoid it</item>
+    <item>Searching for parking spaces along the way</item>
+    <item>Found a parking space, please click Start</item>
+    <item>Failed to find parking spaces along the way</item>
+    <item>[&]</item>
+    <item>Found a parking space, please click Start</item>
+    <item>Found a parking space, please click Start</item>
+    <item>Please pay attention to the toll gate</item>
+    <item>[&] About to drive out of the ramp, please be safe</item>
+    <item>Approaching a ramp, please take over the vehicle and help me drive through</item>
+    <item>Memory parking exited, please follow the guide line to the next level</item>
+  </string-array>
+  <string-array name="array_training_tips">
+    <item>Please enter an underground parking lot first and try again.</item>
+    <item>Please drive off the ramp and try again.</item>
+    <item>Before starting the learning process, please do not reverse in the underground garage.</item>
+    <item>Unavailable for now.</item>
+    <item>[&] Learning route, please drive to your parking space.</item>
+    <item>Vehicle speed too high, please reduce it.</item>
+    <item>Just passed by the ramp, the learning starting point has been updated to the current location.</item>
+    <item>Just passed by the speed bump.</item>
+    <item>Beyond the maximum learning distance, route learning has exited.</item>
+    <item>This learning session has ended.</item>
+    <item>You have driven off the parking lot, route learning has exited.</item>
+    <item>Saving learning route.</item>
+    <item>Learning successful.</item>
+    <item>Learning failed.</item>
+    <item>[&]</item>
+    <item>Reversing detected, this learning has failed. Please re-enter the parking lot and try again.</item>
+    <item>Uphill detected, this learning has failed.</item>
+    <item>Downhill detected, this learning has failed.</item>
+    <item>Please enter an underground parking lot first and try again.</item>
+    <item>Please enter an underground parking lot first and try again.</item>
+    <item>Memory parking in progress, map learning is not available.</item>
+    <item>Memory parking has been used, map learning is not available.</item>
+    <item>Encountered a small problem, unable to learn this time.</item>
+    <item>Please close the door first.</item>
+    <item>Function switch is not turned on.</item>
+    <item>Learning in progress, learning distance has reached 900 meters.</item>
+    <item>Loop route detected in the learning.</item>
+    <item>Learning conditions met but no parking spaces detected.</item>
+    <item>Encountered a small problem, unavailable for now.</item>
+  </string-array>
+  <string-array name="array_training_fail_reason">
+    <item>Retry or try a different route.</item>
+    <item>Not parked in the parking space.</item>
+    <item>Insufficient route information.</item>
+    <item>Reversing.</item>
+    <item>Failed to save route.</item>
+  </string-array>
+  <string-array name="array_setting_dialog_tab">
+    <item>Voice</item>
+    <item>Sound Effect</item>
+  </string-array>
+</resources>
