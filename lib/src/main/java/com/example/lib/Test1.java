@@ -16,6 +16,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.TreeMap;
 
 public class Test1 {
@@ -60,37 +61,46 @@ public class Test1 {
 
     public static void main(String[] args) throws IOException {
 
-        List<BeanArray> zhList = readXml(path + "\\values\\arrays.xml");
-
         File[] files = new File(path).listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
-                return file.isDirectory() && file.getName().startsWith("values-");
+                return file.isDirectory() && file.getName().startsWith("values");
             }
         });
+        List<BeanArray> zhList = null;
         assert files != null;
-        assert zhList != null;
-
         TreeMap<String, List<BeanArray>> map = new TreeMap<>();
-        for (File file : files) {
-            if (!file.isDirectory()) continue;
-//            String filePath = file.getAbsolutePath() + "\\arrays.xml";
-//            preWriteFile(filePath);
-            preWriteFile(file.getAbsolutePath() + "\\strings.xml");
-
-//            List<BeanArray> cur = readXml(file.getAbsolutePath() + "\\arrays.xml");
-//            compareWithZh(zhList, cur);
-//            map.put(file.getAbsolutePath(), cur);
-//            createUserDotXML(file.getAbsolutePath() + "\\arrays.xml", cur);
+        for (File dir : files) {
+            if (!dir.isDirectory()) continue;
+            File[] childFiles = dir.listFiles(new FileFilter() {
+                @Override
+                public boolean accept(File file) {
+                    return file.isFile() && file.getName().equals("arrays.xml");
+                }
+            });
+            assert childFiles != null;
+            if (dir.getName().equals("values")) {
+                for (File file : childFiles) {
+                    zhList = readXml(file.getAbsolutePath());
+                }
+                continue;
+            }
+            for (File file : childFiles) {
+                preWriteFile(file.getAbsolutePath());
+                List<BeanArray> cur = readXml(file.getAbsolutePath());
+                assert zhList != null;
+                compareWithZh(zhList, cur);
+                map.put(file.getAbsolutePath(), cur);
+                createUserDotXML(file.getAbsolutePath(), cur);
+            }
         }
 
     }
 
     private static void preWriteFile(String filePath) {
-        String content = FileUtil.readFile(filePath);
-        assert content != null;
+        StringBuilder content = new StringBuilder(Objects.requireNonNull(FileUtil.readFile(filePath)));
         FileUtil.writerFile(filePath,
-                content.replaceAll("\\[&] ", "").
+                content.toString().replaceAll("\\[&] ", "").
                         replaceAll("\\[&]", "").
                         replaceAll("'", "\\\\'"));
     }
