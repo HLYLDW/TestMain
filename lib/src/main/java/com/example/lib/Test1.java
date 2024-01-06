@@ -81,7 +81,7 @@ public class Test1 {
         File[] files = new File(path).listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
-                return file.isDirectory() && file.getName().startsWith("values");
+                return file.isDirectory() && file.getName().startsWith("values") && !file.getName().equals("values-en");
             }
         });
         Bean zhBean = new Bean();
