@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Porte Ouverte</item>
+    <item>Capot Ouvert</item>
+    <item>Pression des pneus anormale, veuillez vérifier</item>
+    <item>Erreur de stationnement, veuillez contacter le service client</item>
+    <item>Erreur de stationnement, veuillez contacter le service client</item>
+    <item>Stationnement anormal, veuillez contacter le service client</item>
+    <item>Veuillez d’abord préparer le véhicule</item>
+    <item>Impossible de détecter les places de stationnement en raison de vitesses plus élevées</item>
+    <item>Erreur de stationnement, veuillez contacter le service client</item>
+    <item>Veuillez attacher votre ceinture de sécurité en premier</item>
+    <item>Tronc Ouvert</item>
+    <item>Mode remorque activé, IPA indisponible</item>
+    <item>Veuillez ajuster la suspension à la position normale</item>
+    <item>Suspension en cours d’utilisation, impossible de se garer</item>
+    <item>Erreur de suspension, veuillez contacter le service client [&][&][&][&][&][&] Stationnement en pause, le frein n’est pas relâché</item>
+    <item>Stationnement en pause, les portes sont ouvertes</item>
+    <item>Stationnement en pause, veuillez relâcher la pédale d’accélérateur</item>
+    <item>Stationnement en pause, le tronc est ouvert</item>
+    <item>Stationnement en pause, le capot est ouvert [&][&][&][&][&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Relâchez le frein et nous sommes prêts à partir !</item>
+    <item>Stationnement en mémoire en cours</item>
+    <item>Tournez à gauche à l'approche</item>
+    <item>Tournez à droite à l'approche</item>
+    <item>À l'intersection à venir, veuillez faire attention aux véhicules</item>
+    <item>Sur le point d'entrer dans une rampe</item>
+    <item>Sur le point d'entrer dans une rampe</item>
+    <item>Sur le point de contourner des obstacles à venir</item>
+    <item>Éviter les obstacles à proximité [&][&] Veuillez ne pas accélérer</item>
+    <item>Sortie du stationnement en mémoire</item>
+    <item>Sortie du stationnement en mémoire</item>
+    <item>Sur le point de se garer dans votre place de stationnement</item>
+    <item>Sortie du stationnement en mémoire [&][&][&] Veuillez faire attention à l'environnement</item>
+    <item>Dans un espace de passage étroit, veuillez être prudent</item>
+    <item>Sur le point d'atteindre votre place de stationnement</item>
+    <item>Sur le point de franchir un dos d'âne, accrochez-vous bien</item>
+    <item>Contournement des piétons à venir [&][&] Évitement des piétons</item>
+    <item>Sur le point de contourner le véhicule devant [&][&] Attente du déplacement du véhicule devant</item>
+    <item>Sortie du stationnement en mémoire</item>
+    <item>Sur le point de reculer et d'ajuster la position</item>
+    <item>Faites attention au véhicule qui arrive en sens inverse</item>
+    <item>Échec de l'activation du stationnement en mémoire</item>
+    <item>Évitement des véhicules derrière</item>
+    <item>Faites attention aux piétons</item>
+    <item>Faites attention aux piétons</item>
+    <item>Freinage d'urgence</item>
+    <item>Faites attention à l'environnement [&][&] Le véhicule arrière suit depuis longtemps, veuillez l'éviter</item>
+    <item>Recherche de places de stationnement le long du trajet</item>
+    <item>Place de stationnement trouvée, veuillez cliquer sur Démarrer</item>
+    <item>Échec de la recherche de places de stationnement le long du trajet [&][&][&] Place de stationnement trouvée, veuillez cliquer sur Démarrer</item>
+    <item>Place de stationnement trouvée, veuillez cliquer sur Démarrer</item>
+    <item>Veuillez faire attention à la barrière de péage [&][&] Sur le point de sortir de la rampe, veuillez être prudent</item>
+    <item>Approche d'une rampe, veuillez prendre le contrôle du véhicule et aidez-moi à passer</item>
+    <item>Sortie du stationnement en mémoire, veuillez suivre la ligne guide jusqu'au niveau suivant</item>
+  </string-array>
+  <string-array name="array_setting_dialog_tab">
+    <item>Voix</item>
+    <item>Effet sonore</item>
+  </string-array>
+</resources>

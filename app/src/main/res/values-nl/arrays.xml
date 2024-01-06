@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Deur geopend</item>
+    <item>Motorkap geopend</item>
+    <item>Abnormale bandenspanning, controleer dit alstublieft</item>
+    <item>Parkeerfout, neem contact op met de klantenservice</item>
+    <item>Parkeerfout, neem contact op met de klantenservice</item>
+    <item>Parkeerprobleem, neem contact op met de klantenservice</item>
+    <item>Maak eerst het voertuig gereed</item>
+    <item>Kan geen parkeerplaatsen detecteren vanwege hogere snelheden</item>
+    <item>Parkeerfout, neem contact op met de klantenservice</item>
+    <item>Maak eerst uw veiligheidsgordel vast</item>
+    <item>Kofferbak geopend</item>
+    <item>Aanhangwagenmodus geactiveerd, IPA is niet beschikbaar</item>
+    <item>Pas de ophanging aan naar de normale positie</item>
+    <item>Ophanging in gebruik, kan niet parkeren</item>
+    <item>Ophangingsfout, neem contact op met de klantenservice</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parkeren gepauzeerd, de rem is niet vrijgegeven</item>
+    <item>Parkeren gepauzeerd, de deuren zijn geopend</item>
+    <item>Parkeren gepauzeerd, laat het gaspedaal los</item>
+    <item>Parkeren gepauzeerd, de kofferbak is geopend</item>
+    <item>Parkeren gepauzeerd, de motorkap is geopend</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Laat de rem los en we kunnen vertrekken!</item>
+    <item>Memory Parking wordt uitgevoerd</item>
+    <item>Sla linksaf</item>
+    <item>Sla rechtsaf</item>
+    <item>Bij het volgende kruispunt, let op andere voertuigen</item>
+    <item>Bijna bij een oprit</item>
+    <item>Bijna bij een oprit</item>
+    <item>Bijna obstakels voorbij</item>
+    <item>Vermijd nabijgelegen obstakels [&][&] Versnel alstublieft niet</item>
+    <item>Memory Parking voltooid</item>
+    <item>Memory Parking voltooid</item>
+    <item>Bijna bij uw parkeerplaats</item>
+    <item>Memory Parking voltooid [&][&][&] Let alstublieft op de omgeving</item>
+    <item>In een smalle doorgang, wees voorzichtig</item>
+    <item>Bijna bij uw parkeerplaats</item>
+    <item>Bijna over een verkeersdrempel, houd u goed vast</item>
+    <item>Voorbijgaande voetgangers [&][&] Voetgangers vermijden</item>
+    <item>Bijna voorbij het voorste voertuig [&][&] Wachten tot het voorste voertuig beweegt</item>
+    <item>Memory Parking voltooid</item>
+    <item>Bijna achteruitrijden en positie aanpassen</item>
+    <item>Let op het tegemoetkomende voertuig</item>
+    <item>Mislukt om Memory Parking te activeren</item>
+    <item>Vermijd de voertuigen erachter</item>
+    <item>Let op voetgangers</item>
+    <item>Let op voetgangers</item>
+    <item>Noodstop</item>
+    <item>Let op de omgeving [&][&] Achterliggend voertuig volgt al lange tijd, vermijd het alstublieft</item>
+    <item>Zoeken naar parkeerplaatsen langs de weg</item>
+    <item>Een parkeerplaats gevonden, klik alstublieft op Start</item>
+    <item>Mislukt om parkeerplaatsen langs de weg te vinden [&][&][&] Een parkeerplaats gevonden, klik alstublieft op Start</item>
+    <item>Een parkeerplaats gevonden, klik alstublieft op Start</item>
+    <item>Let alstublieft op de tolpoort [&][&] Bijna bij het verlaten van de oprit, wees alstublieft voorzichtig</item>
+    <item>Bijna bij een oprit, neem alstublieft het stuur over en help me bij het rijden</item>
+    <item>Memory Parking voltooid, volg alstublieft de geleidelijn naar het volgende niveau</item>
+  </string-array>
+  <string-array name="array_setting_dialog_tab">
+    <item>Spraak-</item>
+    <item>geluidseffect</item>
+  </string-array>
+</resources>

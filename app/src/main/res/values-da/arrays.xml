@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Dør åbnet</item>
+    <item>Motorhjelm åbnet</item>
+    <item>Unormalt dæktryk, tjek venligst</item>
+    <item>Parkering fejl, kontakt venligst kundeservice</item>
+    <item>Parkering fejl, kontakt venligst kundeservice</item>
+    <item>Anormal parkering, kontakt venligst kundeservice</item>
+    <item>Venligst gør køretøjet klar først</item>
+    <item>Kan ikke registrere parkeringspladser på grund af højere hastigheder</item>
+    <item>Parkeringsfejl, kontakt venligst kundeservice</item>
+    <item>Venligst spænd sikkerhedsselen først</item>
+    <item>Bagagerum åbnet</item>
+    <item>Trailer-tilstand aktiveret, IPA er utilgængelig</item>
+    <item>Venligst juster affjedringen til normal position</item>
+    <item>Affjedring i brug, kan ikke parkere</item>
+    <item>Affjedringsfejl, kontakt venligst kundeservice</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parkering sat på pause, bremsen er ikke frigivet</item>
+    <item>Parkering sat på pause, dørene er åbnet</item>
+    <item>Parkering sat på pause, frigiv speederen</item>
+    <item>Parkering sat på pause, bagagerummet er åbnet</item>
+    <item>Parkering sat på pause, motorhjelmen er åbnet</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Frigiv bremsen, og vi er klar til at køre!</item>
+    <item>Husket parkering i gang</item>
+    <item>Venstresving forude</item>
+    <item>Højresving forude</item>
+    <item>Ved krydset forude, pas på køretøjer</item>
+    <item>Skal til at køre ind på en rampe</item>
+    <item>Skal til at køre ind på en rampe</item>
+    <item>Skal omgå forhindringer forude</item>
+    <item>Undgår nærliggende forhindringer</item>
+    <item>[&] Venligst accelerer ikke</item>
+    <item>Husket parkering afsluttet</item>
+    <item>Husket parkering afsluttet</item>
+    <item>Skal til at parkere på din parkeringsplads</item>
+    <item>Husket parkering afsluttet</item>
+    <item>[&]</item>
+    <item>Vær opmærksom på omgivelserne</item>
+    <item>I smal passage, vær forsigtig</item>
+    <item>Skal til at nå din parkeringsplads</item>
+    <item>Skal køre over en fartbump, hold godt fast</item>
+    <item>Omgåelse af fodgængere forude</item>
+    <item>[&] Undgår fodgængere</item>
+    <item>Skal omgå det forankørende køretøj</item>
+    <item>[&] Venter på at det forankørende køretøj bevæger sig</item>
+    <item>Husket parkering afsluttet</item>
+    <item>Skal til at bakke og justere position</item>
+    <item>Vær opmærksom på det modkørende køretøj</item>
+    <item>Kunne ikke aktivere Husket parkering</item>
+    <item>Undgår køretøjerne bagved</item>
+    <item>Pas på fodgængere</item>
+    <item>Pas på fodgængere</item>
+    <item>Nødopbremsning</item>
+    <item>Vær opmærksom på omgivelserne</item>
+    <item>[&] Bagvedkørende køretøj følger i lang tid, undgå det venligst</item>
+    <item>Søger efter parkeringspladser undervejs</item>
+    <item>Fandt en parkeringsplads, klik venligst Start</item>
+    <item>Kunne ikke finde parkeringspladser undervejs</item>
+    <item>[&]</item>
+    <item>Fandt en parkeringsplads, klik venligst Start</item>
+    <item>Fandt en parkeringsplads, klik venligst Start</item>
+    <item>Vær opmærksom på betalingsbommen</item>
+    <item>[&] Skal til at køre ud af rampen, vær forsigtig</item>
+    <item>Nærmer sig en rampe, tag venligst over og hjælp mig med at køre igennem</item>
+    <item>Husket parkering afsluttet, følg venligst retningslinjen til næste niveau</item>
+  </string-array>
+  <string-array name="array_setting_dialog_tab">
+    <item>Stemme</item>
+    <item>lydeffekt</item>
+  </string-array>
+</resources>

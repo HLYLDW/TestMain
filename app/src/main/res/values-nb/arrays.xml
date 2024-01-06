@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Dør åpnet</item>
+    <item>Panser åpnet</item>
+    <item>Unormalt dekktrykk, sjekk det</item>
+    <item>Parkeringsfeil, kontakt kundeservice</item>
+    <item>Parkeringsfeil, kontakt kundeservice</item>
+    <item>Parkering unormal, kontakt kundeservice</item>
+    <item>Gjør kjøretøyet klart først</item>
+    <item>Kan ikke oppdage parkeringsplasser på grunn av høyere hastigheter</item>
+    <item>Parkeringsfeil, kontakt kundeservice</item>
+    <item>Fest sikkerhetsbeltet først</item>
+    <item>Bagasjerom åpnet</item>
+    <item>Tilhengermodus aktivert, IPA er utilgjengelig</item>
+    <item>Juster fjæringen til normal posisjon</item>
+    <item>Fjæring i bruk, kan ikke parkere</item>
+    <item>Fjæringsfeil, kontakt kundeservice</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parkering pauset, bremsen er ikke sluppet</item>
+    <item>Parkering pauset, dørene er åpnet</item>
+    <item>Parkering pauset, slipp gasspedalen</item>
+    <item>Parkering pauset, bagasjerommet er åpnet</item>
+    <item>Parkering pauset, panseret er åpnet</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Slipp bremsen og vi er klare til å kjøre!</item>
+    <item>Minneparkering pågår</item>
+    <item>Venstresving foran</item>
+    <item>Høyresving foran</item>
+    <item>Ved krysset foran, vær oppmerksom på kjøretøy</item>
+    <item>I ferd med å kjøre inn på en rampe</item>
+    <item>I ferd med å kjøre inn på en rampe</item>
+    <item>I ferd med å omgå hindringer foran</item>
+    <item>Unngår nærliggende hindringer</item>
+    <item>[&] Ikke akselerer</item>
+    <item>Minneparkering avsluttet</item>
+    <item>Minneparkering avsluttet</item>
+    <item>I ferd med å parkere på parkeringsplassen din</item>
+    <item>Minneparkering avsluttet</item>
+    <item>[&]</item>
+    <item>Vær oppmerksom på omgivelsene</item>
+    <item>I trang passasje, vær forsiktig</item>
+    <item>I ferd med å nå parkeringsplassen din</item>
+    <item>I ferd med å kjøre over en fartshump, hold deg fast</item>
+    <item>Omgår fotgjengere foran</item>
+    <item>[&] Unngår fotgjengere</item>
+    <item>I ferd med å omgå det fremre kjøretøyet</item>
+    <item>[&] Venter på at det fremre kjøretøyet skal flytte seg</item>
+    <item>Minneparkering avsluttet</item>
+    <item>I ferd med å rygge og justere posisjon</item>
+    <item>Vær oppmerksom på møtende kjøretøy</item>
+    <item>Klarte ikke å aktivere minneparkering</item>
+    <item>Unngår kjøretøyene bak</item>
+    <item>Pass på fotgjengere</item>
+    <item>Pass på fotgjengere</item>
+    <item>Nødbremsing</item>
+    <item>Vær oppmerksom på omgivelsene</item>
+    <item>[&] Bakre kjøretøy har fulgt etter lenge, unngå det</item>
+    <item>Søker etter parkeringsplasser langs veien</item>
+    <item>Fant en parkeringsplass, trykk Start</item>
+    <item>Klarte ikke å finne parkeringsplasser langs veien</item>
+    <item>[&]</item>
+    <item>Fant en parkeringsplass, trykk Start</item>
+    <item>Fant en parkeringsplass, trykk Start</item>
+    <item>Vær oppmerksom på bommen</item>
+    <item>[&] I ferd med å kjøre ut av rampen, vær forsiktig</item>
+    <item>Nærmer seg en rampe, ta over kjøretøyet og hjelp meg å kjøre gjennom</item>
+    <item>Minneparkering avsluttet, følg veiledningen til neste nivå</item>
+  </string-array>
+  <string name="array_setting_dialog_tab">Tale [&]Lydeffekt</string>
+</resources>

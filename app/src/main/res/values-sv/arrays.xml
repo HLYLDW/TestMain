@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Dörren är öppen</item>
+    <item>Motorhuven är öppen</item>
+    <item>Onormalt däcktryck, kontrollera det</item>
+    <item>Parkering fel, kontakta kundtjänst</item>
+    <item>Parkering fel, kontakta kundtjänst</item>
+    <item>Parkering onormal, kontakta kundtjänst</item>
+    <item>Gör fordonet redo först</item>
+    <item>Kan inte detektera parkeringsplatser på grund av högre hastigheter</item>
+    <item>Parkering fel, kontakta kundtjänst</item>
+    <item>Spänn fast säkerhetsbältet först</item>
+    <item>Bagageutrymmet är öppet</item>
+    <item>Släpvagnsläge aktiverat, IPA är otillgängligt</item>
+    <item>Justera fjädringen till normal position</item>
+    <item>Fjädringen används, kan inte parkera</item>
+    <item>Fjädringsfel, kontakta kundtjänst</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parkering Pausd, bromsen är inte släppt</item>
+    <item>Parkering Pausd, dörrarna är öppna</item>
+    <item>Parkering Pausd, släpp gaspedalen</item>
+    <item>Parkering Pausd, bagageutrymmet är öppet</item>
+    <item>Parkering Pausd, motorhuven är öppen</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Släpp bromsen och vi är redo att åka!</item>
+    <item>Minnesparkering pågår</item>
+    <item>Vänstersväng framför</item>
+    <item>Högervarv framför</item>
+    <item>Vid korsningen framför, var vänlig och se upp för fordon</item>
+    <item>Ska snart köra in på en ramp</item>
+    <item>Ska snart köra in på en ramp</item>
+    <item>Ska snart passera hinder framför</item>
+    <item>Undviker närliggande hinder</item>
+    <item>[&] Accelerera inte</item>
+    <item>Minnesparkering avslutad</item>
+    <item>Minnesparkering avslutad</item>
+    <item>Ska snart parkera på din parkeringsplats</item>
+    <item>Minnesparkering avslutad</item>
+    <item>[&]</item>
+    <item>Var vänlig och var uppmärksam på omgivningen</item>
+    <item>Var försiktig i smala passager</item>
+    <item>Ska snart nå din parkeringsplats</item>
+    <item>Ska snart köra över en fartgupp, håll i dig</item>
+    <item>Undviker fotgängare framför</item>
+    <item>[&] Undviker fotgängare</item>
+    <item>Ska snart passera det främre fordonet</item>
+    <item>[&] Väntar på att det främre fordonet ska flytta sig</item>
+    <item>Minnesparkering avslutad</item>
+    <item>Ska snart backa och justera position</item>
+    <item>Var uppmärksam på mötande fordon</item>
+    <item>Misslyckades med att aktivera Minnesparkering</item>
+    <item>Undviker fordonen bakom</item>
+    <item>Var uppmärksam på fotgängare</item>
+    <item>Var uppmärksam på fotgängare</item>
+    <item>Nödbromsning</item>
+    <item>Var uppmärksam på omgivningen</item>
+    <item>[&] Bilen bakom har följt efter länge, undvik den</item>
+    <item>Söker efter parkeringsplatser längs vägen</item>
+    <item>Hittade en parkeringsplats, var vänlig och klicka på Start</item>
+    <item>Misslyckades med att hitta parkeringsplatser längs vägen</item>
+    <item>[&]</item>
+    <item>Hittade en parkeringsplats, var vänlig och klicka på Start</item>
+    <item>Hittade en parkeringsplats, var vänlig och klicka på Start</item>
+    <item>Var vänlig och var uppmärksam på bomstationen</item>
+    <item>[&] Ska snart köra ut från rampen, var vänlig och var försiktig</item>
+    <item>Närmar sig en ramp, ta över fordonet och hjälp mig att köra igenom</item>
+    <item>Minnesparkering avslutad, var vänlig och följ guidelinjen till nästa nivå</item>
+  </string-array>
+  <string-array name="array_setting_dialog_tab">
+    <item>Röst</item>
+    <item>Ljudeffekt</item>
+  </string-array>
+</resources>

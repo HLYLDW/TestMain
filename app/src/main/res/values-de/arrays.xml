@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Tür geöffnet</item>
+    <item>Motorhaube geöffnet</item>
+    <item>Abnormaler Reifendruck, bitte überprüfen</item>
+    <item>Parkfehler, bitte kontaktieren Sie den Kundenservice</item>
+    <item>Parkfehler, bitte kontaktieren Sie den Kundenservice</item>
+    <item>Parken abnormal, bitte kontaktieren Sie den Kundenservice</item>
+    <item>Bitte das Fahrzeug zuerst bereit machen</item>
+    <item>Aufgrund höherer Geschwindigkeiten können keine Parkplätze erkannt werden</item>
+    <item>Parkfehler, bitte kontaktieren Sie den Kundenservice</item>
+    <item>Bitte zuerst den Sicherheitsgurt anlegen</item>
+    <item>Kofferraum geöffnet</item>
+    <item>Anhängermodus aktiviert, IPA ist nicht verfügbar</item>
+    <item>Die Federung auf die normale Position einstellen</item>
+    <item>Federung in Benutzung, Einparken nicht möglich</item>
+    <item>Federungsfehler, bitte kontaktieren Sie den Kundenservice</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parken pausiert, die Bremse ist nicht freigegeben</item>
+    <item>Parken pausiert, Türen sind geöffnet</item>
+    <item>Parken pausiert, bitte das Gaspedal freigeben</item>
+    <item>Parken pausiert, der Kofferraum ist geöffnet</item>
+    <item>Parken pausiert, die Motorhaube ist geöffnet</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Die Bremse freigeben und es kann losgehen!</item>
+    <item>Speicher-Parken in Bearbeitung</item>
+    <item>Links abbiegen</item>
+    <item>Rechts abbiegen</item>
+    <item>An der nächsten Kreuzung bitte auf andere Fahrzeuge achten</item>
+    <item>Kurz vor der Einfahrt auf eine Rampe</item>
+    <item>Kurz vor der Einfahrt auf eine Rampe</item>
+    <item>Kurz vor dem Umfahren von Hindernissen</item>
+    <item>Umgehung von nahegelegenen Hindernissen</item>
+    <item>[&] Bitte nicht beschleunigen</item>
+    <item>Speicher-Parken beendet</item>
+    <item>Speicher-Parken beendet</item>
+    <item>Kurz davor, in den Parkplatz einzuparken</item>
+    <item>Speicher-Parken beendet</item>
+    <item>[&]</item>
+    <item>Bitte auf die Umgebung achten</item>
+    <item>Vorsicht in engen Durchfahrten</item>
+    <item>Parkplatz wird erreicht</item>
+    <item>Kurz davor, über eine Temposchwelle zu fahren, festhalten</item>
+    <item>Umgehung von Fußgängern voraus</item>
+    <item>[&] Umgehung von Fußgängern</item>
+    <item>Vorderes Fahrzeug umfahren</item>
+    <item>[&] Warten, bis das vordere Fahrzeug sich bewegt</item>
+    <item>Speicher-Parken beendet</item>
+    <item>Rückwärts fahren und Position anpassen</item>
+    <item>Auf das entgegenkommende Fahrzeug achten</item>
+    <item>Speicher-Parken konnte nicht aktiviert werden</item>
+    <item>Ausweichen von nachfolgenden Fahrzeugen</item>
+    <item>Auf Fußgänger achten</item>
+    <item>Auf Fußgänger achten</item>
+    <item>Notbremsung</item>
+    <item>Auf die Umgebung achten</item>
+    <item>[&] Das nachfolgende Fahrzeug folgt schon lange, bitte vermeiden</item>
+    <item>Suche nach Parkplätzen entlang der Strecke</item>
+    <item>Ein Parkplatz gefunden, bitte auf Start klicken</item>
+    <item>Suche nach Parkplätzen entlang der Strecke fehlgeschlagen</item>
+    <item>[&]</item>
+    <item>Ein Parkplatz gefunden, bitte auf Start klicken</item>
+    <item>Ein Parkplatz gefunden, bitte auf Start klicken</item>
+    <item>Auf die Schranke achten</item>
+    <item>[&] Gleich wird die Rampe verlassen, bitte seien Sie vorsichtig</item>
+    <item>Annäherung an eine Rampe, bitte Sie das Fahrzeug und helfen Sie mir beim Durchfahren</item>
+    <item>Speicher-Parken beendet, bitte folgen Sie der Leitlinie zur nächsten Ebene</item>
+  </string-array>
+  <string-array name="array_setting_dialog_tab">
+    <item>Stimme</item>
+    <item>Soundeffekt</item>
+  </string-array>
+</resources>

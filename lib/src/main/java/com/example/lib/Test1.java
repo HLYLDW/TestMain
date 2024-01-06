@@ -148,24 +148,24 @@ public class Test1 {
         List<BeanArray> curList = bean.arrays;
 
         for (int i = 0; i < zhList.size(); i++) {
-            BeanArray allSource = zhList.get(i);
+            BeanArray zhSource = zhList.get(i);
             BeanArray source = null;
             for (int j = 0; j < curList.size(); j++) {
-                if (curList.get(j).key.equals(allSource.key)) {
+                if (curList.get(j).key.equals(zhSource.key)) {
                     source = curList.get(j);
                     break;
                 }
             }
             if (source == null) {
-                source = allSource;
-                curList.add(i, allSource);
+                source = zhSource;
+                curList.add(i, zhSource);
             }
 
-            if (source.items.size() != allSource.items.size()) {
-                for (int j = 0; j < allSource.items.size(); j++) {
+            if (source.items.size() != zhSource.items.size()) {
+                for (int j = 0; j < zhSource.items.size(); j++) {
                     if (source.items.size() <= j) {
-                        source.items.add(allSource.items.get(j));
-                    } else if (allSource.items.get(j).equals("")) {
+                        source.items.add(zhSource.items.get(j));
+                    } else if (zhSource.items.get(j).equals("")) {
                         if (!source.items.get(j).equals("")) {
                             source.items.add(j, "");
                         }

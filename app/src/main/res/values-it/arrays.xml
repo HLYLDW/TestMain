@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Porta aperta</item>
+    <item>Cofano aperto</item>
+    <item>Pressione pneumatici anomala, controllare</item>
+    <item>Errore di parcheggio, contattare l’assistenza clienti</item>
+    <item>Errore di parcheggio, contattare l’assistenza clienti</item>
+    <item>Anomalia di parcheggio, contattare l’assistenza clienti</item>
+    <item>Prima, preparare il veicolo</item>
+    <item>Impossibile rilevare posti auto a causa della velocità elevata</item>
+    <item>Errore di parcheggio, contattare l’assistenza clienti</item>
+    <item>Prima allaccia la cintura di sicurezza</item>
+    <item>Baule aperto</item>
+    <item>Modalità rimorchio attivata, IPA non disponibile</item>
+    <item>Regolare la sospensione in posizione normale</item>
+    <item>Sospensione in uso, impossibile l’ingresso nel parcheggio</item>
+    <item>Errore di sospensione, contattare l’assistenza clienti</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parcheggio in pausa, il freno non è rilasciato</item>
+    <item>Parcheggio in pausa, porte aperte</item>
+    <item>Parcheggio in pausa, rilasciare il pedale dell’acceleratore</item>
+    <item>Parcheggio in pausa, il baule è aperto</item>
+    <item>Parcheggio in pausa, il cofano è aperto</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Rilascia il freno e siamo pronti a partire!</item>
+    <item>Parcheggio in memoria in corso</item>
+    <item>Curva a sinistra avanti</item>
+    <item>Curva a destra avanti</item>
+    <item>All’incrocio avanti, presta attenzione ai veicoli</item>
+    <item>Si sta per entrare in una rampa</item>
+    <item>Si sta per entrare in una rampa</item>
+    <item>Si sta per superare ostacoli avanti</item>
+    <item>Evitare gli ostacoli vicini</item>
+    <item>[&] Non accelerare</item>
+    <item>Uscita dal parcheggio in memoria</item>
+    <item>Uscita dal parcheggio in memoria</item>
+    <item>Si sta per parcheggiare nel posto auto</item>
+    <item>Uscita dal parcheggio in memoria</item>
+    <item>[&]</item>
+    <item>Prestare attenzione all’ambiente circostante</item>
+    <item>Fare attenzione nei posti dal passaggio stretto</item>
+    <item>Si sta per raggiungere il posto auto</item>
+    <item>Si sta per superare un dissuasore, tieniti forte</item>
+    <item>Superamento dei pedoni avanti</item>
+    <item>[&] Evitare i pedoni</item>
+    <item>Si sta per superare il veicolo avanti</item>
+    <item>[&] In attesa che il veicolo avanti si muova</item>
+    <item>Uscita dal parcheggio in memoria</item>
+    <item>Si sta per fare retromarcia e regolare la posizione</item>
+    <item>Presta attenzione al veicolo in arrivo</item>
+    <item>Attivazione del parcheggio in memoria non riuscita</item>
+    <item>Evitare i veicoli dietro</item>
+    <item>Attenzione ai pedoni</item>
+    <item>Attenzione ai pedoni</item>
+    <item>Frenata di emergenza</item>
+    <item>Presta attenzione all’ambiente circostante</item>
+    <item>[&] Il veicolo posteriore ti segue da molto tempo, evitalo</item>
+    <item>Ricerca di posti auto lungo il percorso</item>
+    <item>Trovato un posto auto, tocca Avvia</item>
+    <item>Individuazione posti auto lungo il percorso non riuscita</item>
+    <item>[&]</item>
+    <item>Trovato un posto auto, tocca Avvia</item>
+    <item>Trovato un posto auto, tocca Avvia</item>
+    <item>Prestare attenzione al casello</item>
+    <item>[&] Si sta per uscire dalla rampa, fare attenzione</item>
+    <item>Rampa in avvicinamento, prendere il controllo del veicolo e aiutami ad attraversare</item>
+    <item>Uscita dal parcheggio in memoria, seguire la linea guida fino al livello successivo</item>
+  </string-array>
+</resources>

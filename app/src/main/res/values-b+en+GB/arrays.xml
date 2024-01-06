@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string-array name="array_super_park_abnormal">
+    <item>[&] Door Opened</item>
+    <item>Bonnet Opened</item>
+    <item>Abnormal Tyre Pressure, please check it</item>
+    <item>Parking error, please contact customer service</item>
+    <item>Parking error, please contact customer service</item>
+    <item>Parking Abnormal, please contact customer service</item>
+    <item>Please make the vehicle Ready first</item>
+    <item>Unable to detect parking spaces due to higher speeds</item>
+    <item>Parking error, please contact customer service</item>
+    <item>Please fasten your seatbelt first</item>
+    <item>Boot Opened</item>
+    <item>Trailer Mode activated, IPA is unavailable</item>
+    <item>Please adjust the suspension to normal position</item>
+    <item>Suspension in use, unable to park in</item>
+    <item>Suspension error, please contact customer service</item>
+    <item>[&]</item>
+    <item>[&]</item>
+    <item>[&] Parking paused, the brake is not released</item>
+    <item>Parking paused, doors are opened</item>
+    <item>Parking paused, please release the accelerator pedal</item>
+    <item>Parking paused, the boot is opened</item>
+    <item>Parking paused, the bonnet is opened</item>
+    <item>[&]</item>
+    <item>[&]</item>
+  </string-array>
+  <string-array name="array_pro_parking_tts">
+    <item>Release the brake and we are ready to go!</item>
+    <item>Memory parking in progress</item>
+    <item>Left turn ahead</item>
+    <item>Right turn ahead</item>
+    <item>At the intersection ahead, please watch out for vehicles</item>
+    <item>About to enter a ramp</item>
+    <item>About to enter a ramp</item>
+    <item>About to bypass obstacles ahead</item>
+    <item>Avoiding nearby obstacles</item>
+    <item>[&] Please do not accelerate</item>
+    <item>Memory parking exited</item>
+    <item>Memory parking exited</item>
+    <item>About to park in your parking space</item>
+    <item>Memory parking exited</item>
+    <item>[&]</item>
+    <item>Please pay attention to the surroundings</item>
+    <item>In narrow passage space, please be cautious</item>
+    <item>About to reach your parking space</item>
+    <item>About to drive over a speed bump, hold on tight</item>
+    <item>Bypassing pedestrians ahead</item>
+    <item>[&] Avoiding pedestrians</item>
+    <item>About to bypass the front vehicle</item>
+    <item>[&] Waiting for the front vehicle to move</item>
+    <item>Memory parking exited</item>
+    <item>About to reverse and adjust position</item>
+    <item>Pay attention to the oncoming vehicle</item>
+    <item>Failed to activate memory parking</item>
+    <item>Avoiding the vehicles behind</item>
+    <item>Watch out for pedestrians</item>
+    <item>Watch out for pedestrians</item>
+    <item>Emergency braking</item>
+    <item>Pay attention to the surroundings</item>
+    <item>[&] Rear vehicle is following for a long time, please avoid it</item>
+    <item>Searching for parking spaces along the way</item>
+    <item>Found a parking space, please tap Start</item>
+    <item>Failed to find parking spaces along the way</item>
+    <item>[&]</item>
+    <item>Found a parking space, please tap Start</item>
+    <item>Found a parking space, please tap Start</item>
+    <item>Please pay attention to the toll gate</item>
+    <item>[&] About to drive out of the ramp, please be safe</item>
+    <item>Approaching a ramp, please take over the vehicle and help me drive through</item>
+    <item>Memory parking exited, please follow the guide line to the next level</item>
+  </string-array>
+  <string-array name="array_setting_dialog_tab">
+    <item>Voice</item>
+    <item>Sound Effect</item>
+  </string-array>
+</resources>
