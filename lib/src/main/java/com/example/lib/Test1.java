@@ -21,22 +21,39 @@ import java.util.TreeMap;
 
 public class Test1 {
 
-    /*
-     *filePath:xml文件路径
-     */
-    public static List<BeanArray> readXml(String filePath) throws IOException {
-        List<BeanArray> list = new ArrayList<>();
+    public static TreeMap<String, String> readStringXml(String filePath) throws IOException {
+        TreeMap<String, String> map = new TreeMap<>();
         InputStream in = null;
-        // 解析xml文档内容
         try {
             SAXReader reader = new SAXReader();
             in = Files.newInputStream(new File(filePath).toPath());
             Document doc = reader.read(in);
-            //获取根节点
             Element root = doc.getRootElement();
             List<Element> usersElem = root.elements();
             for (Element userElem : usersElem) {
-                //获取user的index属性值
+                String key = userElem.attribute("name").getValue();
+                String value = userElem.getText();
+                map.put(key, value);
+            }
+        } catch (Exception e) {
+            System.out.println("error: " + e);
+            return null;
+        } finally {
+            in.close();
+        }
+        return map;
+    }
+
+    public static List<BeanArray> readArrayXml(String filePath) throws IOException {
+        List<BeanArray> list = new ArrayList<>();
+        InputStream in = null;
+        try {
+            SAXReader reader = new SAXReader();
+            in = Files.newInputStream(new File(filePath).toPath());
+            Document doc = reader.read(in);
+            Element root = doc.getRootElement();
+            List<Element> usersElem = root.elements();
+            for (Element userElem : usersElem) {
                 String name = userElem.attribute("name").getValue();
                 List<Element> textElem = userElem.elements();
                 BeanArray itemKey = new BeanArray();
@@ -67,63 +84,84 @@ public class Test1 {
                 return file.isDirectory() && file.getName().startsWith("values");
             }
         });
-        List<BeanArray> zhList = null;
+        Bean zhBean = new Bean();
         assert files != null;
-        TreeMap<String, List<BeanArray>> map = new TreeMap<>();
+
+        List<Bean> list = new ArrayList<>();
         for (File dir : files) {
             if (!dir.isDirectory()) continue;
-            File[] childFiles = dir.listFiles(new FileFilter() {
-                @Override
-                public boolean accept(File file) {
-                    return file.isFile() && file.getName().equals("arrays.xml");
-                }
-            });
-            assert childFiles != null;
             if (dir.getName().equals("values")) {
-                for (File file : childFiles) {
-                    zhList = readXml(file.getAbsolutePath());
-                }
-                continue;
+                zhBean = praseBeanFromFile(dir);
+            } else {
+                list.add(praseBeanFromFile(dir));
             }
-            for (File file : childFiles) {
-                preWriteFile(file.getAbsolutePath());
-                List<BeanArray> cur = readXml(file.getAbsolutePath());
-                assert zhList != null;
-                compareWithZh(zhList, cur);
-                map.put(file.getAbsolutePath(), cur);
-                createUserDotXML(file.getAbsolutePath(), cur);
-            }
+        }
+
+        for (Bean bean : list) {
+            compareWithZh(zhBean, bean);
+            createUserDotXML(bean);
         }
 
     }
 
-    private static void preWriteFile(String filePath) {
-        StringBuilder content = new StringBuilder(Objects.requireNonNull(FileUtil.readFile(filePath)));
-        FileUtil.writerFile(filePath,
-                content.toString().replaceAll("\\[&] ", "").
-                        replaceAll("\\[&]", "").
-                        replaceAll("'", "\\\\'"));
+    private static Bean praseBeanFromFile(File dir) throws IOException {
+        Bean bean = new Bean();
+        File[] childFiles = dir.listFiles(new FileFilter() {
+            @Override
+            public boolean accept(File file) {
+                return file.isFile() && (file.getName().equals("arrays.xml") || file.getName().equals("strings.xml"));
+            }
+        });
+        assert childFiles != null;
+
+        bean.path = dir.getAbsolutePath();
+
+        for (File file : childFiles) {
+            if (file.getName().equals("arrays.xml")) {
+                if (!dir.getName().equals("values")) {
+                    preWriteFile(file.getAbsolutePath());
+                }
+                bean.arrays = readArrayXml(file.getAbsolutePath());
+            } else if (file.getName().equals("strings.xml")) {
+                if (!dir.getName().equals("values")) {
+                    preWriteFile(file.getAbsolutePath());
+                }
+                bean.strings = readStringXml(file.getAbsolutePath());
+            }
+        }
+
+        return bean;
     }
 
-    private static boolean compareWithZh(List<BeanArray> zhList, List<BeanArray> cur) {
-        boolean same = true;
+    private static void preWriteFile(String filePath) {
+        StringBuilder content = new StringBuilder(Objects.requireNonNull(FileUtil.readFile(filePath)));
+        String newContent = content.toString().replaceAll("\\\\'", "'").
+                replaceAll("'", "\\\\'").
+                replaceAll("\\[&] ", "").
+                replaceAll("\\[&]", "");
+        FileUtil.writerFile(filePath, newContent);
+    }
+
+    private static void compareWithZh(Bean zhBean, Bean bean) {
+
+        List<BeanArray> zhList = zhBean.arrays;
+        List<BeanArray> curList = bean.arrays;
+
         for (int i = 0; i < zhList.size(); i++) {
             BeanArray allSource = zhList.get(i);
             BeanArray source = null;
-            for (int j = 0; j < cur.size(); j++) {
-                if (cur.get(j).key.equals(allSource.key)) {
-                    source = cur.get(j);
+            for (int j = 0; j < curList.size(); j++) {
+                if (curList.get(j).key.equals(allSource.key)) {
+                    source = curList.get(j);
                     break;
                 }
             }
             if (source == null) {
                 source = allSource;
-                cur.add(i, allSource);
-                same = false;
+                curList.add(i, allSource);
             }
 
             if (source.items.size() != allSource.items.size()) {
-                same = false;
                 for (int j = 0; j < allSource.items.size(); j++) {
                     if (source.items.size() <= j) {
                         source.items.add(allSource.items.get(j));
@@ -136,15 +174,18 @@ public class Test1 {
             }
         }
 
-        return same;
+
+        for (String key : zhBean.strings.keySet()) {
+            if (!bean.strings.containsKey(key)) {
+                bean.strings.put(key,zhBean.strings.get(key));
+            }
+        }
+
     }
 
 
-    /*
-     *path:要写入数据的xml文件：D:\\123.xml
-     *list:Users集合
-     */
-    public static boolean createUserDotXML(String path, List<BeanArray> list) throws IOException {
+
+    public static boolean createUserDotXML(Bean bean) throws IOException {
         boolean flag = true;
         OutputStream outputStream = null;
         XMLWriter xmlWriter = null;
@@ -155,7 +196,7 @@ public class Test1 {
             //创建根节点
             Element rootElem = DocumentHelper.createElement("resources");
             //将list里的值循环写入Element中
-            for (BeanArray item : list) {
+            for (BeanArray item : bean.arrays) {
                 Element userElem = DocumentHelper.createElement("array");
                 userElem.addAttribute("name", item.key);
                 for (String s : item.items) {
@@ -169,7 +210,37 @@ public class Test1 {
 
             OutputFormat outputFormat = new OutputFormat();
             outputFormat.setEncoding("UTF-8");
-            outputStream = Files.newOutputStream(Paths.get(path));
+            outputStream = Files.newOutputStream(Paths.get(bean.path + "\\arrays.xml"));
+            xmlWriter = new XMLWriter(outputStream, outputFormat);
+            xmlWriter.write(document);
+        } catch (IOException e) {
+            System.out.println("io Exception:" + e);
+            return false;
+        } catch (Exception e) {
+            System.out.println("Exception:" + e);
+            return false;
+        } finally {
+            xmlWriter.close();
+            outputStream.close();
+        }
+
+        try {
+            //创建document文档
+            document = DocumentHelper.createDocument();
+            //创建根节点
+            Element rootElem = DocumentHelper.createElement("resources");
+            //将list里的值循环写入Element中
+            for (String key : bean.strings.keySet()) {
+                Element userElem = DocumentHelper.createElement("string");
+                userElem.addAttribute("name", key);
+                userElem.setText(bean.strings.get(key));
+                rootElem.add(userElem);
+            }
+            document.add(rootElem);
+
+            OutputFormat outputFormat = new OutputFormat();
+            outputFormat.setEncoding("UTF-8");
+            outputStream = Files.newOutputStream(Paths.get(bean.path + "\\strings.xml"));
             xmlWriter = new XMLWriter(outputStream, outputFormat);
             xmlWriter.write(document);
         } catch (IOException e) {

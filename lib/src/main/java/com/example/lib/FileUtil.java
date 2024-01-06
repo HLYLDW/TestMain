@@ -7,7 +7,17 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import kotlin.text.Regex;
+import kotlin.text.RegexKt;
+
 public class FileUtil {
+    public static void main(String[] args) {
+        String str = "'ADFSAF\\\'DFADF";
+        System.out.println(str);
+        str = str.replaceAll("\\\\'","'").replaceAll("'","\\\\'");
+
+        System.out.println(str);
+    }
     public static String readFile(String fileNamePath) {
         File file = new File(fileNamePath);
         BufferedReader reader = null;
