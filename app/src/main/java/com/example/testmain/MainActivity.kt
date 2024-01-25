@@ -29,23 +29,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        val map = TreeMap<String,Int>()
-        map["array_auto_parking"] = resources.getStringArray(R.array.array_auto_parking).size
-        map["array_toast_super_park"] = resources.getStringArray(R.array.array_toast_super_park).size
-        map["array_super_park_abnormal"] = resources.getStringArray(R.array.array_super_park_abnormal).size
-        map["array_no_use_toast"] = resources.getStringArray(R.array.array_no_use_toast).size
-        map["array_no_use"] = resources.getStringArray(R.array.array_no_use).size
-        map["array_pro_parking"] = resources.getStringArray(R.array.array_pro_parking).size
-        map["array_pro_parking_tts"] = resources.getStringArray(R.array.array_pro_parking_tts).size
-        map["array_training_tips"] = resources.getStringArray(R.array.array_training_tips).size
-        map["array_training_fail_reason"] = resources.getStringArray(R.array.array_training_fail_reason).size
-        map["array_notification_words"] = resources.getStringArray(R.array.array_notification_words).size
-        map["array_share_map_view_floors"] = resources.getStringArray(R.array.array_share_map_view_floors).size
-        map["array_setting_dialog_tab"] = resources.getStringArray(R.array.array_setting_dialog_tab).size
-        map.forEach { (t, u) ->
-            Log.i("MainTest", "key $t == value $u")
-        }
-        Log.i("MainTest", "数组："+ resources.getStringArray(R.array.array_auto_parking)[0])
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

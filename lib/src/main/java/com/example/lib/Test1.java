@@ -74,33 +74,40 @@ public class Test1 {
     }
 
 
-    static String path = "D:\\project\\gittest\\TestMain\\app\\src\\main\\res";
+    static String path = "D:\\project\\Autopilot\\modulebase\\src\\main\\res";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         File[] files = new File(path).listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
-                return file.isDirectory() && file.getName().startsWith("values") && !file.getName().equals("values-en");
+                return file.isDirectory() && file.getName().startsWith("values-");
             }
         });
         Bean zhBean = new Bean();
         assert files != null;
 
-        List<Bean> list = new ArrayList<>();
-        for (File dir : files) {
-            if (!dir.isDirectory()) continue;
-            if (dir.getName().equals("values")) {
-                zhBean = praseBeanFromFile(dir);
-            } else {
-                list.add(praseBeanFromFile(dir));
+        try {
+            List<Bean> list = new ArrayList<>();
+            for (File dir : files) {
+                if (!dir.isDirectory()) continue;
+                if (dir.getName().equals("values")) {
+                    zhBean = praseBeanFromFile(dir);
+                } else {
+                    list.add(praseBeanFromFile(dir));
+                }
             }
+
+            System.out.println("comple : " );
+            for (Bean bean : list) {
+                compareWithZh(zhBean, bean);
+                createUserDotXML(bean);
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
 
-        for (Bean bean : list) {
-            compareWithZh(zhBean, bean);
-            createUserDotXML(bean);
-        }
 
     }
 
@@ -157,11 +164,9 @@ public class Test1 {
                 }
             }
             if (source == null) {
-                source = zhSource;
-                curList.add(i, zhSource);
-            }
-
-            if (source.items.size() != zhSource.items.size()) {
+//                source = zhSource;
+//                curList.add(i, zhSource);
+            } else if (source.items.size() != zhSource.items.size()) {
                 for (int j = 0; j < zhSource.items.size(); j++) {
                     if (source.items.size() <= j) {
                         source.items.add(zhSource.items.get(j));
@@ -175,11 +180,11 @@ public class Test1 {
         }
 
 
-        for (String key : zhBean.strings.keySet()) {
-            if (!bean.strings.containsKey(key)) {
-                bean.strings.put(key,zhBean.strings.get(key));
-            }
-        }
+//        for (String key : zhBean.strings.keySet()) {
+//            if (!bean.strings.containsKey(key)) {
+//                bean.strings.put(key,zhBean.strings.get(key));
+//            }
+//        }
 
     }
 

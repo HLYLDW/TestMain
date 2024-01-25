@@ -47,7 +47,7 @@ public class Test {
                 list.add(itemKey);
             }
         } catch (Exception e) {
-            System.out.println("error: "+ e);
+            System.out.println("error: " + e);
             return null;
         } finally {
             in.close();
@@ -62,25 +62,66 @@ public class Test {
 
         List<BeanArray> zhList = readXml(path + "\\values\\arrays.xml");
 
-        File[] files = new File(path).listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File file) {
-                return file.isDirectory() && file.getName().startsWith("values-") && !file.getName().equals("values-en");
-            }
-        });
-        assert files != null;
-        assert zhList != null;
 
-        TreeMap<String,List<BeanArray>> map = new TreeMap<>();
-        for (File file : files) {
-            if (!file.isDirectory()) continue;
-            List<BeanArray> cur = readXml(file.getAbsolutePath() + "\\arrays.xml");
-//            compareWithZh(zhList, cur);
-            boolean same = compareWithZh1(zhList, cur);
-            map.put(file.getAbsolutePath(), cur);
-//            createUserDotXML(file.getAbsolutePath() + "\\arrays.xml", cur);
-            System.out.println(file.getName() + ":" + same);
+        OutputStream outputStream = null;
+        XMLWriter xmlWriter = null;
+        Document document = null;
+        try {
+            //创建document文档
+            document = DocumentHelper.createDocument();
+            //创建根节点
+            Element rootElem = DocumentHelper.createElement("resources");
+            //将list里的值循环写入Element中
+            for (int i = 0; i < zhList.size(); i++) {
+                String name = zhList.get(i).key;
+                StringBuilder value = new StringBuilder();
+                for (int j = 0; j < zhList.get(i).items.size(); j++) {
+                    value.append(zhList.get(i).items.get(j));
+                    if (j != zhList.get(i).items.size() - 1) {
+                        value.append("[&]");
+                    }
+                }
+                System.out.println(name + ":" + value.toString() + "== " + name);
+                Element userElem = DocumentHelper.createElement("string");
+                userElem.addAttribute("name", name);
+                userElem.setText(value.toString());
+                rootElem.add(userElem);
+            }
+            document.add(rootElem);
+            OutputFormat outputFormat = new OutputFormat();
+            outputFormat.setEncoding("UTF-8");
+            outputStream = Files.newOutputStream(Paths.get("D:\\project\\gittest\\TestMain\\lib\\src\\main\\java\\com\\example" + "\\strings.xml"));
+            xmlWriter = new XMLWriter(outputStream, outputFormat);
+            xmlWriter.write(document);
+        } catch (IOException e) {
+            System.out.println("io Exception:" + e);
+        } catch (Exception e) {
+            System.out.println("Exception:" + e);
+        } finally {
+            xmlWriter.close();
+            outputStream.close();
         }
+
+
+//        File[] files = new File(path).listFiles(new FileFilter() {
+//            @Override
+//            public boolean accept(File file) {
+//                return file.isDirectory() && file.getName().startsWith("values-");
+//            }
+//        });
+//        assert files != null;
+//        assert zhList != null;
+//
+//        TreeMap<String,List<BeanArray>> map = new TreeMap<>();
+//        for (File file : files) {
+//            if (!file.isDirectory()) continue;
+//            List<BeanArray> cur = readXml(file.getAbsolutePath() + "\\arrays.xml");
+////            compareWithZh(zhList, cur);
+//            boolean same = compareWithZh1(zhList, cur);
+//            map.put(file.getAbsolutePath(), cur);
+////            createUserDotXML(file.getAbsolutePath() + "\\arrays.xml", cur);
+//            System.out.println(file.getName() + ":" + same);
+//        }
 
 
     }
@@ -156,7 +197,7 @@ public class Test {
             for (BeanArray item : list) {
                 Element userElem = DocumentHelper.createElement("array");
                 userElem.addAttribute("name", item.key);
-                for (String s  : item.items) {
+                for (String s : item.items) {
                     Element nameElem = DocumentHelper.createElement("item");
                     nameElem.addText(s);
                     userElem.add(nameElem);
@@ -168,13 +209,13 @@ public class Test {
             OutputFormat outputFormat = new OutputFormat();
             outputFormat.setEncoding("UTF-8");
             outputStream = Files.newOutputStream(Paths.get(path));
-            xmlWriter = new XMLWriter(outputStream,outputFormat);
+            xmlWriter = new XMLWriter(outputStream, outputFormat);
             xmlWriter.write(document);
-        } catch (IOException e){
-            System.out.println("io Exception:"+ e);
+        } catch (IOException e) {
+            System.out.println("io Exception:" + e);
             return false;
-        } catch (Exception e){
-            System.out.println("Exception:"+ e);
+        } catch (Exception e) {
+            System.out.println("Exception:" + e);
             return false;
         } finally {
             xmlWriter.close();
