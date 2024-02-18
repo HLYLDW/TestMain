@@ -67,6 +67,7 @@ dependencies {
 
     implementation project(':mainModlue')
     implementation 'com.ldw.submodlue:submodlue:1.0.2'
+    implementation 'io.github.ldwhly:theme:0.0.6-alpha'
 }
 afterEvaluate {
     println("order app afterEvaluate")

@@ -5,6 +5,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import androidx.startup.Initializer
+import com.ldw.theme.api.ThemeChangeManager
 
 class AutopilotInitializer: Initializer<Unit>{
 
@@ -13,6 +14,7 @@ class AutopilotInitializer: Initializer<Unit>{
         Handler(Looper.getMainLooper()).post {
             Log.i("AutopilotInitializer" , "post ：${context}")
         }
+        ThemeChangeManager
     }
 
     override fun dependencies(): MutableList<Class<out Initializer<*>>> {
