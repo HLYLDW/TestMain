@@ -81,7 +81,7 @@ public class Test1 {
         File[] files = new File(path).listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
-                return file.isDirectory() && file.getName().startsWith("values-");
+                return file.isDirectory() && file.getName().contains("values-en");
             }
         });
         Bean zhBean = new Bean();
@@ -99,10 +99,10 @@ public class Test1 {
             }
 
             System.out.println("comple : " );
-            for (Bean bean : list) {
-                compareWithZh(zhBean, bean);
-                createUserDotXML(bean);
-            }
+//            for (Bean bean : list) {
+//                compareWithZh(zhBean, bean);
+//                createUserDotXML(bean);
+//            }
 
         } catch (Exception e) {
             throw new RuntimeException(e);
