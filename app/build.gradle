@@ -66,8 +66,9 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
     implementation project(':mainModlue')
-    implementation 'com.ldw.submodlue:submodlue:1.0.2'
+//    implementation 'com.ldw.submodlue:submodlue:1.0.2'
     implementation 'io.github.ldwhly:theme:0.0.6-alpha'
+    implementation 'io.github.ldwhly:replacesuperclass:0.0.0-alpha'
 }
 afterEvaluate {
     println("order app afterEvaluate")

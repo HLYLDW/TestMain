@@ -4,6 +4,10 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+//    plugins{
+//        id 'com.github.johnrengelman.shadow' version "${agpShadow}" apply false
+//    }
+
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -11,6 +15,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+//    dependencies {
+//        classpath 'io.github.ldwhly:replacesuperclass:0.0.0-alpha'
+//    }
 }
 println("order setting start")
 rootProject.name = "TestMain"

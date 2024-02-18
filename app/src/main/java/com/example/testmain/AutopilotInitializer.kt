@@ -14,6 +14,7 @@ class AutopilotInitializer: Initializer<Unit>{
         Handler(Looper.getMainLooper()).post {
             Log.i("AutopilotInitializer" , "post ：${context}")
         }
+//        ReplaceSuperClassPlugin
         ThemeChangeManager
     }
 
