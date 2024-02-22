@@ -14,7 +14,9 @@ public class Test3 {
 
         //1677898270927 2023-03-04 10:51:10    1677916490958 2023-03-04 15:54:50
         long time = 1677916127986L + 10 * 1000;
-        long duration = 4 * 60 * 1000;
+
+        time = 1677916490958L;
+        long duration = 10 * 1000;
 
 
         File recordDir = new File("D:\\BaiduNetdiskDownload");
@@ -25,7 +27,7 @@ public class Test3 {
 
         long startTime = time - duration;
         List<DataBean<Long, File>> list = new ArrayList<>();
-
+        System.out.println("时间:" + sdf.format(new Date(time)) + " duration:" + duration);
         for (int i = 0; i < files.length; i++) {
             String name = files[i].getName();
             if (name.contains(DVR_FILE_MARK) && name.contains(frontTag)) {
@@ -34,10 +36,13 @@ public class Test3 {
                     // 行程录像视频开始录制的时间戳
                     long recordStartTime = Long.parseLong(timeStr);
                     long recordEndTime = recordStartTime + 3 * 60 * 1000;
-                    System.out.println("时间:" + sdf.format(new Date(recordStartTime)) + " === " + sdf.format(new Date(files[i].lastModified())));
+
                     boolean accept = recordEndTime > startTime && recordStartTime < time;
                     if (accept) {
+                        System.out.println("时间1:" + sdf.format(new Date(recordStartTime)) + " === " + sdf.format(new Date(files[i].lastModified())) + " == " + timeStr);
                         list.add(new DataBean<>(recordStartTime, files[i]));
+                    } else {
+                        System.out.println("时间2:" + sdf.format(new Date(recordStartTime)) + " === " + sdf.format(new Date(files[i].lastModified())) + " == " + timeStr);
                     }
                 }
             }
@@ -50,6 +55,6 @@ public class Test3 {
             }
         });
 
-        System.out.println(" end ");
+        System.out.println(" end " + list.size());
     }
 }
