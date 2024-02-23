@@ -1,5 +1,7 @@
 package com.example.lib;
 
+import com.example.lib.utils.TimeUtils;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,7 +29,7 @@ public class Test3 {
 
         long startTime = time - duration;
         List<DataBean<Long, File>> list = new ArrayList<>();
-        System.out.println("时间:" + sdf.format(new Date(time)) + " duration:" + duration);
+        System.out.println("时间:" + TimeUtils.getTimeStr(time) + " duration:" + duration);
         for (int i = 0; i < files.length; i++) {
             String name = files[i].getName();
             if (name.contains(DVR_FILE_MARK) && name.contains(frontTag)) {
