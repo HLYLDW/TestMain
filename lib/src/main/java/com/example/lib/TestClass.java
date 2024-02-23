@@ -1,6 +1,6 @@
 package com.example.lib;
 
-public class TestClass {
+public class TestClass implements ITest{
     int aaa = 0;
     public TestClass(int aaa) {
         this.aaa = aaa;
@@ -11,4 +11,5 @@ public class TestClass {
         System.out.println("TestClass setAaa aaa:" + aaa);
         this.aaa = aaa;
     }
+
 }
