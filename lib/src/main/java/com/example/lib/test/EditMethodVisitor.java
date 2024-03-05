@@ -1,18 +1,24 @@
 package com.example.lib.test;
 
+import static org.objectweb.asm.Opcodes.ALOAD;
 import static org.objectweb.asm.Opcodes.DUP;
 import static org.objectweb.asm.Opcodes.GETSTATIC;
+import static org.objectweb.asm.Opcodes.GOTO;
 import static org.objectweb.asm.Opcodes.IADD;
+import static org.objectweb.asm.Opcodes.IALOAD;
 import static org.objectweb.asm.Opcodes.ICONST_2;
 import static org.objectweb.asm.Opcodes.ICONST_3;
+import static org.objectweb.asm.Opcodes.IF_ICMPLE;
 import static org.objectweb.asm.Opcodes.ILOAD;
 import static org.objectweb.asm.Opcodes.INVOKESPECIAL;
 import static org.objectweb.asm.Opcodes.INVOKEVIRTUAL;
 import static org.objectweb.asm.Opcodes.ISTORE;
 import static org.objectweb.asm.Opcodes.NEW;
 import static org.objectweb.asm.Opcodes.RETURN;
+import static org.objectweb.asm.Opcodes.SIPUSH;
 
 
+import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 
 
@@ -34,7 +40,7 @@ public class EditMethodVisitor extends MethodVisitor {
 
     @Override
     public void visitMethodInsn(int opcode, String owner, String name, String descriptor, boolean isInterface) {
-        System.out.println("visitMethodInsn ");
+        System.out.println("visitMethodInsn owner:" + owner + " name:" + name + " opcode:" + opcode);
         if ("com/example/lib/TestClass".equals(owner) && "<init>".equals(name) && !methodName.equals("setAaa")) {
             super.visitMethodInsn(opcode, "com/example/lib/SuperTestClass", name, descriptor, isInterface);
         } else {
@@ -48,27 +54,29 @@ public class EditMethodVisitor extends MethodVisitor {
         System.out.println("visitCode ");
         super.visitCode();
         if (methodName.equals("setAaa")) {
-            MethodVisitor methodVisitor = this;
-//            methodVisitor.visitVarInsn(ILOAD, 1);
-//            methodVisitor.visitInsn(ICONST_2);
-//            methodVisitor.visitInsn(IADD);
-//            methodVisitor.visitVarInsn(ISTORE, 2);
-//            methodVisitor.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-//            methodVisitor.visitTypeInsn(NEW, "java/lang/StringBuilder");
-//            methodVisitor.visitInsn(DUP);
-//            methodVisitor.visitMethodInsn(INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "()V", false);
-//            methodVisitor.visitLdcInsn("ChildTestClass \u63d2\u5165:");
-//            methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
-//            methodVisitor.visitVarInsn(ILOAD, 2);
-//            methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(I)Ljava/lang/StringBuilder;", false);
-//            methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
-//            methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
-            methodVisitor.visitInsn(ICONST_2);
-            methodVisitor.visitInsn(ICONST_3);
-            methodVisitor.visitInsn(IADD);
-            methodVisitor.visitVarInsn(ISTORE, 2);
+
+            mv.visitIntInsn(ILOAD, 1);
+            mv.visitIntInsn(SIPUSH, 11222);
+            mv.visitInsn(IADD);
+            mv.visitVarInsn(ISTORE, 2);
 
 
+            mv.visitVarInsn(ILOAD, 2);
+            mv.visitInsn(ICONST_2);
+
+            Label label0 = new Label();
+            mv.visitJumpInsn(IF_ICMPLE, label0);
+            mv.visitIntInsn(SIPUSH, 555);
+            mv.visitIntInsn(SIPUSH, 11222);
+            mv.visitInsn(IADD);
+            mv.visitVarInsn(ISTORE, 2);
+            Label label1 = new Label();
+            mv.visitJumpInsn(GOTO, label1);
+            mv.visitLabel(label0);
+            mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+            mv.visitLdcInsn("ChildTestClass aaa<=10");
+            mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+            mv.visitLabel(label1);
 
         }
     }
@@ -81,10 +89,7 @@ public class EditMethodVisitor extends MethodVisitor {
     @Override
     public void visitMaxs(int maxStack, int maxLocals) {
         System.out.println("visitMaxs " + maxLocals + " " + maxLocals);
-        if (methodName.equals("setAaa")) {
-            super.visitMaxs(3, 3);
-            return;
-        }
         super.visitMaxs(maxStack, maxLocals);
+//        mv.visitMaxs(maxStack);
     }
 }

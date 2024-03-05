@@ -20,10 +20,10 @@ public class AsmTest {
 //        String clazzFilePath = path;
         ClassReader classReader = new ClassReader(new FileInputStream(clazzFilePath));
 
-        ClassWriter classWriter = new ClassWriter(0);
+        ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
 
-        EditClassVisitor editClassVisitor = new EditClassVisitor(Opcodes.ASM5, classWriter);
-        classReader.accept(editClassVisitor, 0);
+        EditClassVisitor editClassVisitor = new EditClassVisitor(Opcodes.ASM9, classWriter);
+        classReader.accept(editClassVisitor, ClassReader.EXPAND_FRAMES);
 
          //写入文件
         byte[] bytes = classWriter.toByteArray();

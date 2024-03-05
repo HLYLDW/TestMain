@@ -8,4 +8,8 @@ public class TimeUtils {
     public static String getTimeStr(long time) {
         return sdf.format(new Date(time));
     }
+
+    public static String test(long time) {
+        return getTimeStr(time);
+    }
 }

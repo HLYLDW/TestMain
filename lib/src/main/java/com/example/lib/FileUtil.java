@@ -3,9 +3,12 @@ package com.example.lib;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.channels.FileChannel;
 
 import kotlin.text.Regex;
 import kotlin.text.RegexKt;
@@ -59,5 +62,56 @@ public class FileUtil {
     }
 
 
+    /**
+     * 根据文件路径拷贝文件
+     * @param src 源文件
+     * @param destPath 目标文件路径
+     * @return boolean 成功true、失败false
+     */
+    public static boolean copyFile(File src, String destPath) {
+        if ((src == null) || (destPath== null)) {
+            return false;
+        }
+        File dest = new File(destPath);
+        if (dest.exists()) {
+            boolean isSuccess = dest.delete();
+            if (!isSuccess) {
+                return false;
+            }
+        }
+        try {
+            boolean isSuccess = dest.createNewFile();
+            if (!isSuccess) {
+                return false;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        boolean result = false;
+        FileChannel srcChannel = null;
+        FileChannel dstChannel = null;
+        try {
+            srcChannel = new FileInputStream(src).getChannel();
+            dstChannel = new FileOutputStream(dest).getChannel();
+            srcChannel.transferTo(0, srcChannel.size(), dstChannel);
+            result = true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (srcChannel != null) {
+                    srcChannel.close();
+                }
+                if (dstChannel != null) {
+                    dstChannel.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
 
 }
