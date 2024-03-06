@@ -11,18 +11,13 @@ public class ChildTestClass extends TestClass {
 
     @Override
     public void setAaa(int aaa) {
-//        if (aaa > 10) {
-//            System.out.println("ChildTestClass aaa>10");
-//        } else {
-//            System.out.println("ChildTestClass aaa<=10");
-//        }
+        if (aaa > 10) {
+            System.out.println("ChildTestClass aaa>10");
+        } else {
+            System.out.println("ChildTestClass aaa<=10");
+        }
 //
-//        int i = aaa + 11222;
-//        if (i>10) {
-//            System.out.println("ChildTestClass i>10");
-//        } else {
-            System.out.println("ChildTestClass i<=10");
-//        }
+        System.out.println("ChildTestClass i<=10");
     }
 
     public void setAaa1(int aaa, int B, int C, int D) {
@@ -55,9 +50,8 @@ public class ChildTestClass extends TestClass {
             case 9:
                 System.out.println("ChildTestClass aaa==9");
                 break;
-            case 10:
-                System.out.println("ChildTestClass aaa==10");
-                break;
+//            case 10:
+//                throw new RuntimeException("ChildTestClass aaa==10");
             default:
                 System.out.println("ChildTestClass aaa>10");
                 break;

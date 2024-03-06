@@ -12,6 +12,7 @@ import static org.objectweb.asm.Opcodes.SIPUSH;
 
 import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.commons.AdviceAdapter;
 
@@ -24,46 +25,31 @@ public class EditMethodVisitor1 extends AdviceAdapter {
 
     int currentTimeVarIndex = 1;
 
+    Label label = new Label();
     @Override
     protected void onMethodEnter() {
 
-
         super.onMethodEnter();
-
-        currentTimeVarIndex = newLocal(Type.LONG_TYPE);//创建一个局部变量
+        System.out.println("onMethodEnter " + getName() + " currentTimeVarIndex==" + currentTimeVarIndex);
+        currentTimeVarIndex = newLocal(Type.LONG_TYPE);
         visitMethodInsn(INVOKESTATIC, "java/lang/System", "currentTimeMillis", "()J", false);
         visitVarInsn(LSTORE, currentTimeVarIndex);
-        System.out.println("onMethodEnter " + getName() + " currentTimeVarIndex==" + currentTimeVarIndex);
-
+        visitVarInsn(LLOAD, currentTimeVarIndex);
+        visitLdcInsn(Long.valueOf(10L));
+        visitInsn(LCMP);
+        visitJumpInsn(IFLE, label);
+        visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+        visitLdcInsn("currentTimeMillis > 1000");
+        visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+        visitLabel(label);
     }
 
     @Override
     protected void onMethodExit(int opcode) {
         super.onMethodExit(opcode);
-        System.out.println("onMethodExit " + opcode);
-        AdviceAdapter methodVisitor = this;
-        methodVisitor.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-        methodVisitor.visitTypeInsn(NEW, "java/lang/StringBuilder");
-        methodVisitor.visitInsn(DUP);
-        methodVisitor.visitMethodInsn(INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "()V", false);
-        methodVisitor.visitLdcInsn(getName() + " cost ");
-        methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
-        methodVisitor.visitMethodInsn(INVOKESTATIC, "java/lang/System", "currentTimeMillis", "()J", false);
-        methodVisitor.visitVarInsn(LLOAD, currentTimeVarIndex);
-        methodVisitor.visitInsn(LSUB);
-        methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(J)Ljava/lang/StringBuilder;", false);
-        methodVisitor.visitLdcInsn("ms");
-        methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/StringBuilder", "append", "(Ljava/lang/String;)Ljava/lang/StringBuilder;", false);
-        methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/StringBuilder", "toString", "()Ljava/lang/String;", false);
-        methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
 
+        // 异常处理代码
+//        methodVisitor.visitMethodInsn(INVOKEVIRTUAL, "java/lang/Throwable", "printStackTrace", "()V", false);
     }
 
-    private void test() {
-        try {
-            long start = 1L;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
